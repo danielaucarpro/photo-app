@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+.photosWrap {
+    margin: 30px;
+    position: relative;
+
+    .banner {
+        margin: auto;
+        width: 900px;
+        text-align: center;
+        background-color: antiquewhite;
+    }
+
+    .photo {
+        position: relative;
+        height: 300px;
+        width: 300px;
+        display: inline-flex;
+        // flex-direction: column;
+
+        img {
+            height: 300px;
+            width: 300px;
+            // position: relative;
+        }
+
+        .deleteBtn {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
