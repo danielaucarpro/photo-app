@@ -1,12 +1,9 @@
-// import FetchComments from './components/FetchComments';
-import Comments from './components/Comments';
+
 import './App.css';
+import Photos from './components/Photos';
 
 function App() {
   return (
-    <>
-      <Comments/>
-    </>
   );
 }
 
