@@ -7,29 +7,33 @@ class FetchComments extends React.Component {
     };
 
     componentDidMount() {
-        fetch("https://jsonplaceholder.typicode.com/comments").then(response => {
+        fetch("https://jsonplaceholder.typicode.com/comments")
+        .then(response => {
             if (response.status !== 200) {
                 console.log(`We have a problem! ${response.status}`);
             }
-            response.json().then(data => {
+            response.json()
+            .then(data => {
+                console.log(data)
                 this.setState({
-                    comments: data
+                    comments: data.slice(0, 10)
                 });
             });
         })
-        console.log('DID MOUNT' + this.state.comments);
+        .catch((error)=>{
+            console.log((`Error ${error}`))
+        })
     }
 
-    //editComment
+
 
     render() {
-        const comments = this.state.comments;
-        console.log('HERE IS YOUR FETCH' + this.state.comments);
+
         return (
             <>
-                <Comments comments = {this.state.comments}/>
+                <Comments comments={this.state.comments} />
             </>
-        );
+        )
     }
 }
 

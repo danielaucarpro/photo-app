@@ -1,13 +1,17 @@
+import React from 'react';
 import './Comments.css';
 
-function Comments(props) {
+const Comments = (props) => {
     console.log('YOUR ARE IN COMMENT COMPONENT ' + props.comments);
-    return(
-        
-        <>
-        <div>HI</div>
-        </>
-    );
+    return (
+        props.comments.map((comment) => {
+            console.log(comment.id);
+            return <div key={comment.id}>
+                <p>{comment.name}</p>
+                <p>{comment.body}</p>
+            </div>
+        })
+    )
 }
 
 export default Comments;
