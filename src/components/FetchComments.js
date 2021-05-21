@@ -17,20 +17,17 @@ class FetchComments extends React.Component {
                 });
             });
         })
+        console.log('DID MOUNT' + this.state.comments);
     }
 
-    showJson(){
-        const comments = this.state.comments;
-        console.log(comments);
-    }
     //editComment
 
     render() {
         const comments = this.state.comments;
-        console.log(comments);
+        console.log('HERE IS YOUR FETCH' + this.state.comments);
         return (
             <>
-                {/* <Comments/> */}
+                <Comments comments = {this.state.comments}/>
             </>
         );
     }
