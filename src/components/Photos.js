@@ -8,6 +8,17 @@ export default class Photos extends React.Component {
         photo: []
     }
 
+    deletePhoto = (photoId) => {
+        console.log (`delete called ${photoId}`)
+        console.log (this.state.photo[0].id)
+        const photo = this.state.photo.filter(p => p.id !== photoId)
+      
+        this.setState({
+            photo: photo
+        })
+
+    }
+
     componentDidMount() {
         fetch('https://jsonplaceholder.typicode.com/photos')
             .then((res) => {
@@ -16,33 +27,21 @@ export default class Photos extends React.Component {
                 }
                 res.json()
                     .then(data => {
-                        // let photos = data.slice(0, 10)
                         console.log(data)
                         this.setState({
-
                             photo: data.slice(0, 10)
-
-
                         })
-
-                        // console.log(this.state.photo[2].url)
-                        // console.log(this.state.photo[2])
-                        // console.log(this.state.photo[2].title)
                     })
             }).catch((error) => `Error${error}`)
 
     }
 
     render() {
-
-
-
-
         return (
             <>
                 <div className="photosWrap">
                     <div className="banner">Album</div>
-                    <Photo photos={this.state.photo} />
+                    <Photo  photos={this.state.photo} delete={this.deletePhoto} />
                     {/* Comments components */}
                 </div>
             </>
