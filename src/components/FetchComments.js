@@ -8,21 +8,21 @@ class FetchComments extends React.Component {
 
     componentDidMount() {
         fetch("https://jsonplaceholder.typicode.com/comments")
-        .then(response => {
-            if (response.status !== 200) {
-                console.log(`We have a problem! ${response.status}`);
-            }
-            response.json()
-            .then(data => {
-                console.log(data)
-                this.setState({
-                    comments: data.slice(0, 10)
-                });
-            });
-        })
-        .catch((error)=>{
-            console.log((`Error ${error}`))
-        })
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log(`We have a problem! ${response.status}`);
+                }
+                response.json()
+                    .then(data => {
+                        console.log("COMMENT DATA" + data)
+                        this.setState({
+                            comments: data.slice(0, 10)
+                        });
+                    });
+            })
+            .catch((error) => {
+                console.log((`Error ${error}`))
+            })
     }
 
 

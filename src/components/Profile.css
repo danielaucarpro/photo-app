@@ -1,0 +1,42 @@
+.profile-container{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.profile-picture{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5rem;
+    background-color: gray;
+    margin-right: 3rem;
+}
+
+.profile-span{
+    font-size: 1.5rem;
+}
+
+.profile-text{
+    margin-top: 1rem;
+}
+
+.edit-btn{
+    border: 1px solid lightgray;
+    border-radius: .3rem;
+    background-color: white;
+    width: 5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.edit-btn:hover{
+    background-color: lightgray;
+    color: gray;
+}
+
+.nameText{
+    font-size: 1rem;
+    font-weight: bold;
+}

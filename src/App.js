@@ -1,14 +1,18 @@
-
 import './App.css';
+import Header from './components/Header';
 import Photos from './components/Photos';
-import FetchComments from './components/FetchComments';
+import Footer from './components/Footer';
+import Profile from './components/Profile';
 
 function App() {
   return (
-    <>
-    <Photos/>
-    <FetchComments/>
-    </>
+    <div>
+      <Header />
+      <Profile />
+      <Photos />
+      <Footer />
+    </div>
+
   );
 }
 
