@@ -1,19 +1,24 @@
 import React from 'react';
 
-const Photo = (props) => {
-   console.log(props.photos)
 
-   return (
-      
-      props.photos.map((photo) => {
+export default class Photo extends React.Component {
 
-         return <div key={photo.id} id={photo.id} className="photo">
-            <img src={photo.url} alt="" />
-            <button className="deleteBtn" onClick={()=>props.delete(photo.id)}>Delete</button>
-         </div>
+   render() {
+      return (
 
-      })
-   )
+         this.props.photos.map((photo) => {
+
+            return <>
+               <div key={photo.id} id={photo.id} className="photo">
+                  {/* <a href={photo.url}> */}
+                  <img onClick={()=>this.props.modal(photo.id)} src={photo.url} alt="" />
+                  {/* </a> */}
+                  <button className="deleteBtn" onClick={() => this.props.delete(photo.id)}>Delete</button>
+               </div>
+            
+            </>
+         })
+      )
+   }
 }
 
-export default Photo
