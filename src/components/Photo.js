@@ -9,7 +9,7 @@ export default class Photo extends React.Component {
       return (
 
          this.props.photos.map((photo) => {
-
+           
             return <>
                <div key={photo.id} id={photo.id} className="photo">
                   {/* <a href={photo.url}> */}

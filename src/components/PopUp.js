@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Comments from './FetchComments';
+
 import './Photos.css';
 
 export default class PopUp extends React.Component {
