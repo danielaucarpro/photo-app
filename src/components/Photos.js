@@ -59,7 +59,7 @@ export default class Photos extends React.Component {
                     .then(data => {
                         console.log(data)
                         this.setState({
-                            photo: data.slice(0, 10)
+                            photo: data.slice(0, 15)
                         })
                     })
             }).catch((error) => `Error${error}`)
@@ -70,7 +70,7 @@ export default class Photos extends React.Component {
         return (
             <>
                 <div className="photosWrap">
-                    <div className="banner">Album</div>
+                    {/* <div className="banner">Album</div> */}
                     {this.state.modal ? null :
                         <Photo photos={this.state.photo} delete={this.deletePhoto} modal={this.modal} />
                     }
@@ -83,4 +83,3 @@ export default class Photos extends React.Component {
 
 
 }
-

@@ -4,7 +4,7 @@
 }
 
 .photosWrap {
-  margin: 30px;
+  margin: 3rem 10rem;
   position: relative;
 }
 
@@ -41,6 +41,7 @@
 
 .modalWrap {
   margin: auto;
+  margin-top: 2rem;
   padding: 0;
   top: 0;
   left: 0;
@@ -49,7 +50,6 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: black;
 }
 
 .modalWrap .modal {

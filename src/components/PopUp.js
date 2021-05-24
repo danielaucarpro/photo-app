@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Comments from './FetchComments';
+
 import './Photos.css';
 
 export default class PopUp extends React.Component {
@@ -11,13 +14,15 @@ export default class PopUp extends React.Component {
                 return <>
                     <div key={photo.id} id={photo.id} className="modalWrap">
                         <div className="modal">
-                   <img src={photo.url} alt="" />
-                   <button className="closeBtn" onClick={() => this.props.close(photo.id)}>Close</button>
+                            <img src={photo.url} alt="" />
+                            <button className="closeBtn" onClick={() => this.props.close(photo.id)}>Close</button>
+                            <div className='comments-container'>
+                                <Comments />
+                            </div>
+                        </div>
                     </div>
-                </div>
-             
-             </>
-          })
+                </>
+            })
         )
     }
 }
