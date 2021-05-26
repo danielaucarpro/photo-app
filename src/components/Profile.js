@@ -6,11 +6,11 @@ class Profile extends React.Component {
     state = {
         profileName: "theDeackardCain",
         name: 'Deackard Cain',
-        description: 'Hello! Stay a while and listen!'
+        description: 'Hello! Stay a while and listen!',
     }
 
     edit = () => {
-        alert('hello')
+        // alert('hello')
         this.render = () => {
             return (
                 <Edit></Edit>

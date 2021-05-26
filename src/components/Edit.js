@@ -11,7 +11,7 @@ class Edit extends React.Component {
     render() {
         return (
             <>
-                <form>
+                {/* <form>
                     <label className='input-container'>Company Phrase:
                         <input className='input'
                             type='text'
@@ -20,7 +20,7 @@ class Edit extends React.Component {
                             onChange={(e) => this.setState({ phraseInput: e.target.value })}
                         />
                     </label>
-                </form>
+                </form> */}
                 <div>
                     <p>Name</p>
                     <p>Comment</p>
